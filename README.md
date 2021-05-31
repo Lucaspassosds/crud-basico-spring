@@ -1,6 +1,6 @@
 # crud-basico-spring
 
-Minimal [Spring Boot](http://projects.spring.io/spring-boot/) sample app.
+Basic [Spring Boot](http://projects.spring.io/spring-boot/) api rest app.
 
 ## Requirements
 
@@ -8,6 +8,7 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Running the application locally
 
