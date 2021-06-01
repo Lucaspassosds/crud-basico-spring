@@ -1,9 +1,9 @@
 package com.github.crudbasico.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.github.crudbasico.models.Curso;
 
-public interface CursoRepository extends JpaRepository<Curso, Long> {
-	Curso findById(long id);
+public interface CursoRepository extends CrudRepository<Curso, Long> {
+	
 }

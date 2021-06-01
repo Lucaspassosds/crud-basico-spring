@@ -1,6 +1,7 @@
 package com.github.crudbasico.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,13 +26,13 @@ public class CursoController {
 	CursoRepository cursoRepository;
 	
 	@GetMapping("/cursos")
-	public List<Curso> listaCursos(){
+	public Iterable<Curso> listaCursos(){
 		return cursoRepository.findAll();
 	}
 	
 
 	@GetMapping("/curso/{id}")
-	public Curso listaCursoUnico(@PathVariable(value="id") long id){
+	public Optional<Curso> listaCursoUnico(@PathVariable(value="id") long id){
 		return cursoRepository.findById(id);
 	}
 	
