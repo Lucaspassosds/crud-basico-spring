@@ -35,6 +35,12 @@ public class CursoController {
 	public Optional<Curso> listaCursoUnico(@PathVariable(value="id") long id){
 		return cursoRepository.findById(id);
 	}
+
+	@GetMapping("/curso/qtd-alunos/{id}")
+	public Integer getQuantidadeAlunos(@PathVariable(value="id") long id){
+		Curso curso = cursoRepository.findById(id).get();
+		return curso.getPessoas().size();
+	}
 	
 	@PostMapping("/curso")
 	public Curso salvaCurso(@RequestBody Curso curso) {
