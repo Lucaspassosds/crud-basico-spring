@@ -13,7 +13,12 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 @Entity
+@Document(indexName = "courseindex")
 public class Curso {
 
 
@@ -22,6 +27,7 @@ public class Curso {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
+	@Field(type = FieldType.Text, name = "name")
 	private String nome;
 	
 	@JsonIgnore
